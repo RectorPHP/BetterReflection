@@ -1,4 +1,4 @@
-<?php # inspired by https://github.com/Roave/BetterReflection/issues/276
+<?php # inspired by https://github.com/Rector/BetterReflection/issues/276
 
 # parse all classes in a directory that use some dependencies from /vendor
 

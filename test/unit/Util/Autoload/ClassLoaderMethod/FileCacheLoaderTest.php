@@ -9,8 +9,8 @@ use Rector\BetterReflection\Reflection\ReflectionClass;
 use Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception\SignatureCheckFailed;
 use Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\FileCacheLoader;
 use Rector\BetterReflection\Util\Autoload\ClassPrinter\ClassPrinterInterface;
-use Roave\Signature\CheckerInterface;
-use Roave\Signature\SignerInterface;
+use Rector\Signature\CheckerInterface;
+use Rector\Signature\SignerInterface;
 
 /**
  * @covers \Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\FileCacheLoader
@@ -27,7 +27,7 @@ final class FileCacheLoaderTest extends TestCase
         $classInfo->expects(self::exactly(2))->method('getName')->willReturn($className);
 
         $generatedCode = '// ' . \uniqid(__METHOD__, true);
-        $signature     = \uniqid('Roave/Signature: ', true);
+        $signature     = \uniqid('Rector/Signature: ', true);
         $signedCode    = "<?php\n// " . $signature . "\n" . $generatedCode;
 
         /** @var ClassPrinterInterface|\PHPUnit_Framework_MockObject_MockObject $printer */
@@ -61,7 +61,7 @@ final class FileCacheLoaderTest extends TestCase
         $classInfo->expects(self::exactly(2))->method('getName')->willReturn($className);
 
         $generatedCode = '// ' . \uniqid(__METHOD__, true);
-        $signature     = \uniqid('Roave/Signature: ', true);
+        $signature     = \uniqid('Rector/Signature: ', true);
         $signedCode    = "<?php\n// " . $signature . "\n" . $generatedCode;
 
         /** @var ClassPrinterInterface|\PHPUnit_Framework_MockObject_MockObject $printer */

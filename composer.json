@@ -7,7 +7,7 @@
         "nikic/php-parser": "v4.0.0alpha1",
         "phpdocumentor/reflection-docblock": "^4.1.1",
         "phpdocumentor/type-resolver": "^0.4.0",
-        "roave/signature": "^1.0"
+        "rector/signature": "^1.0"
     },
     "authors": [
         {
@@ -22,7 +22,7 @@
         },
         {
             "name":     "Gary Hockin",
-            "email":    "gary@roave.com",
+            "email":    "gary@rector.com",
             "homepage": "https://github.com/geeh"
         },
         {
@@ -37,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Roave\\BetterReflection\\": "src"
+            "Rector\\BetterReflection\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Roave\\BetterReflectionTest\\": "test/unit",
-            "Roave\\BetterReflectionBenchmark\\": "test/benchmark"
+            "Rector\\BetterReflectionTest\\": "test/unit",
+            "Rector\\BetterReflectionBenchmark\\": "test/benchmark"
         }
     },
     "suggest": {

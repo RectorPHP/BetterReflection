@@ -73,7 +73,7 @@ class ReflectionFunction extends ReflectionFunctionAbstract implements Reflectio
      * code we can access. This means, at present, we can only EVER return false
      * from this function, because you cannot disable user-defined functions.
      *
-     * @todo https://github.com/Roave/BetterReflection/issues/14
+     * @todo https://github.com/Rector/BetterReflection/issues/14
      * @see http://php.net/manual/en/ini.core.php#ini.disable-functions
      */
     public function isDisabled() : bool

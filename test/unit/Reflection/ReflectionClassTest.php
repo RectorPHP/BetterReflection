@@ -523,7 +523,7 @@ PHP;
             $this->astLocator
         )))->reflect(Fixture\ClassWithTwoParents::class);
 
-        self::assertSame(['Roave\\BetterReflectionTest\\Fixture\\ClassWithParent', 'Roave\\BetterReflectionTest\\Fixture\\ExampleClass'], $childReflection->getParentClassNames());
+        self::assertSame(['Rector\\BetterReflectionTest\\Fixture\\ClassWithParent', 'Rector\\BetterReflectionTest\\Fixture\\ExampleClass'], $childReflection->getParentClassNames());
     }
 
     public function startEndLineProvider() : array
