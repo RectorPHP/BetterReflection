@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Reflection;
+namespace Rector\BetterReflection\Reflection;
 
 class ReflectionType
 {

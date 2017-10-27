@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Reflection\Adapter;
+namespace Rector\BetterReflection\Reflection\Adapter;
 
 use ReflectionParameter as CoreReflectionParameter;
-use Roave\BetterReflection\Reflection\ReflectionMethod as BetterReflectionMethod;
-use Roave\BetterReflection\Reflection\ReflectionParameter as BetterReflectionParameter;
+use Rector\BetterReflection\Reflection\ReflectionMethod as BetterReflectionMethod;
+use Rector\BetterReflection\Reflection\ReflectionParameter as BetterReflectionParameter;
 
 class ReflectionParameter extends CoreReflectionParameter
 {
@@ -65,7 +65,7 @@ class ReflectionParameter extends CoreReflectionParameter
      */
     public function getDeclaringFunction()
     {
-        /** @var BetterReflectionMethod|\Roave\BetterReflection\Reflection\ReflectionFunction $function */
+        /** @var BetterReflectionMethod|\Rector\BetterReflection\Reflection\ReflectionFunction $function */
         $function = $this->betterReflectionParameter->getDeclaringFunction();
 
         if ($function instanceof BetterReflectionMethod) {

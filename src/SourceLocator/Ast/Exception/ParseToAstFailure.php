@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\SourceLocator\Ast\Exception;
+namespace Rector\BetterReflection\SourceLocator\Ast\Exception;
 
-use Roave\BetterReflection\SourceLocator\Located\LocatedSource;
+use Rector\BetterReflection\SourceLocator\Located\LocatedSource;
 use RuntimeException;
 use Throwable;
 

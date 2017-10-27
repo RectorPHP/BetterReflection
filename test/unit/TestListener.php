@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflectionTest;
+namespace Rector\BetterReflectionTest;
 
 use ClassWithExplicitGlobalNamespace;
 use ClassWithNoNamespace;
@@ -10,9 +10,9 @@ use PHPUnit\Framework\BaseTestListener;
 use PHPUnit\Framework\Test;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestSuite;
-use Roave\BetterReflectionTest\Fixture\ExampleClass;
-use Roave\BetterReflectionTest\Fixture\Methods;
-use Roave\BetterReflectionTest\FixtureOther\AnotherClass;
+use Rector\BetterReflectionTest\Fixture\ExampleClass;
+use Rector\BetterReflectionTest\Fixture\Methods;
+use Rector\BetterReflectionTest\FixtureOther\AnotherClass;
 
 class TestListener extends BaseTestListener
 {

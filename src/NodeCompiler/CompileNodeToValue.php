@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\NodeCompiler;
+namespace Rector\BetterReflection\NodeCompiler;
 
 use PhpParser\Node;
 use ReflectionFunction;
-use Roave\BetterReflection\Reflection\ReflectionClass;
-use Roave\BetterReflection\Util\FileHelper;
+use Rector\BetterReflection\Reflection\ReflectionClass;
+use Rector\BetterReflection\Util\FileHelper;
 
 class CompileNodeToValue
 {
@@ -90,7 +90,7 @@ class CompileNodeToValue
      * Compile constant expressions
      *
      * @return bool|mixed|null
-     * @throws \Roave\BetterReflection\NodeCompiler\Exception\UnableToCompileNode
+     * @throws \Rector\BetterReflection\NodeCompiler\Exception\UnableToCompileNode
      */
     private function compileConstFetch(Node\Expr\ConstFetch $constNode)
     {
@@ -116,8 +116,10 @@ class CompileNodeToValue
     /**
      * Compile class constants
      *
-     * @return string|int|float|bool|mixed[]|null
-     * @throws \Roave\BetterReflection\Reflector\Exception\IdentifierNotFound
+     * @param Node\Expr\ClassConstFetch $node
+     * @param CompilerContext $context
+     * @return string|int|float|bool|array|null
+     * @throws \Rector\BetterReflection\Reflector\Exception\IdentifierNotFound
      */
     private function compileClassConstFetch(Node\Expr\ClassConstFetch $node, CompilerContext $context)
     {
@@ -153,7 +155,7 @@ class CompileNodeToValue
      *
      * @return mixed
      *
-     * @throws \Roave\BetterReflection\NodeCompiler\Exception\UnableToCompileNode
+     * @throws \Rector\BetterReflection\NodeCompiler\Exception\UnableToCompileNode
      */
     private function compileBinaryOperator(Node\Expr\BinaryOp $node, CompilerContext $context)
     {

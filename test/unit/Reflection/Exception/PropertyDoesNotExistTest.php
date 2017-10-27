@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflectionTest\Reflection\Exception;
+namespace Rector\BetterReflectionTest\Reflection\Exception;
 
 use PHPUnit\Framework\TestCase;
-use Roave\BetterReflection\Reflection\Exception\PropertyDoesNotExist;
+use Rector\BetterReflection\Reflection\Exception\PropertyDoesNotExist;
 
 /**
- * @covers \Roave\BetterReflection\Reflection\Exception\PropertyDoesNotExist
+ * @covers \Rector\BetterReflection\Reflection\Exception\PropertyDoesNotExist
  */
 class PropertyDoesNotExistTest extends TestCase
 {

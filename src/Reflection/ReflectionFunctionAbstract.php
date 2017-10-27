@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Reflection;
+namespace Rector\BetterReflection\Reflection;
 
 use Closure;
 use Exception;
@@ -17,17 +17,17 @@ use PhpParser\Parser;
 use PhpParser\PrettyPrinter\Standard as StandardPrettyPrinter;
 use PhpParser\PrettyPrinterAbstract;
 use Reflector as CoreReflector;
-use Roave\BetterReflection\BetterReflection;
-use Roave\BetterReflection\Identifier\Identifier;
-use Roave\BetterReflection\Identifier\IdentifierType;
-use Roave\BetterReflection\Reflection\Exception\Uncloneable;
-use Roave\BetterReflection\Reflector\Reflector;
-use Roave\BetterReflection\SourceLocator\Located\LocatedSource;
-use Roave\BetterReflection\SourceLocator\Type\ClosureSourceLocator;
-use Roave\BetterReflection\TypesFinder\FindReturnType;
-use Roave\BetterReflection\Util\CalculateReflectionColum;
-use Roave\BetterReflection\Util\GetFirstDocComment;
-use Roave\BetterReflection\Util\Visitor\ReturnNodeVisitor;
+use Rector\BetterReflection\BetterReflection;
+use Rector\BetterReflection\Identifier\Identifier;
+use Rector\BetterReflection\Identifier\IdentifierType;
+use Rector\BetterReflection\Reflection\Exception\Uncloneable;
+use Rector\BetterReflection\Reflector\Reflector;
+use Rector\BetterReflection\SourceLocator\Located\LocatedSource;
+use Rector\BetterReflection\SourceLocator\Type\ClosureSourceLocator;
+use Rector\BetterReflection\TypesFinder\FindReturnType;
+use Rector\BetterReflection\Util\CalculateReflectionColum;
+use Rector\BetterReflection\Util\GetFirstDocComment;
+use Rector\BetterReflection\Util\Visitor\ReturnNodeVisitor;
 
 abstract class ReflectionFunctionAbstract implements CoreReflector
 {
@@ -72,7 +72,7 @@ abstract class ReflectionFunctionAbstract implements CoreReflector
      *
      * @param Node\Stmt\ClassMethod|Node\FunctionLike|Node\Stmt|Node $node Node has to be processed by the PhpParser\NodeVisitor\NameResolver
      *
-     * @throws \Roave\BetterReflection\Reflection\Exception\InvalidAbstractFunctionNodeType
+     * @throws \Rector\BetterReflection\Reflection\Exception\InvalidAbstractFunctionNodeType
      */
     protected function populateFunctionAbstract(
         Reflector $reflector,
@@ -487,8 +487,8 @@ abstract class ReflectionFunctionAbstract implements CoreReflector
      * $reflectionFunction->setBodyFromClosure(function () { return true; });
      *
      *
-     * @throws \Roave\BetterReflection\SourceLocator\Ast\Exception\ParseToAstFailure
-     * @throws \Roave\BetterReflection\Identifier\Exception\InvalidIdentifierName
+     * @throws \Rector\BetterReflection\SourceLocator\Ast\Exception\ParseToAstFailure
+     * @throws \Rector\BetterReflection\Identifier\Exception\InvalidIdentifierName
      */
     public function setBodyFromClosure(Closure $newBody) : void
     {

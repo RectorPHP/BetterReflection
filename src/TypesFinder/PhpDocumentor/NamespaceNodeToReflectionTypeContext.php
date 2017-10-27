@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\TypesFinder\PhpDocumentor;
+namespace Rector\BetterReflection\TypesFinder\PhpDocumentor;
 
 use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node;

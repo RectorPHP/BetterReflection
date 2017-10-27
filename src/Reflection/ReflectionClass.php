@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Reflection;
+namespace Rector\BetterReflection\Reflection;
 
 use InvalidArgumentException;
 use OutOfBoundsException;
@@ -20,20 +20,20 @@ use PhpParser\Node\Stmt\TraitUse;
 use ReflectionClass as CoreReflectionClass;
 use ReflectionProperty as CoreReflectionProperty;
 use Reflector as CoreReflector;
-use Roave\BetterReflection\BetterReflection;
-use Roave\BetterReflection\Reflection\Exception\ClassDoesNotExist;
-use Roave\BetterReflection\Reflection\Exception\NoObjectProvided;
-use Roave\BetterReflection\Reflection\Exception\NotAClassReflection;
-use Roave\BetterReflection\Reflection\Exception\NotAnInterfaceReflection;
-use Roave\BetterReflection\Reflection\Exception\NotAnObject;
-use Roave\BetterReflection\Reflection\Exception\ObjectNotInstanceOfClass;
-use Roave\BetterReflection\Reflection\Exception\PropertyDoesNotExist;
-use Roave\BetterReflection\Reflection\Exception\Uncloneable;
-use Roave\BetterReflection\Reflection\StringCast\ReflectionClassStringCast;
-use Roave\BetterReflection\Reflector\Reflector;
-use Roave\BetterReflection\SourceLocator\Located\LocatedSource;
-use Roave\BetterReflection\Util\CalculateReflectionColum;
-use Roave\BetterReflection\Util\GetFirstDocComment;
+use Rector\BetterReflection\BetterReflection;
+use Rector\BetterReflection\Reflection\Exception\ClassDoesNotExist;
+use Rector\BetterReflection\Reflection\Exception\NoObjectProvided;
+use Rector\BetterReflection\Reflection\Exception\NotAClassReflection;
+use Rector\BetterReflection\Reflection\Exception\NotAnInterfaceReflection;
+use Rector\BetterReflection\Reflection\Exception\NotAnObject;
+use Rector\BetterReflection\Reflection\Exception\ObjectNotInstanceOfClass;
+use Rector\BetterReflection\Reflection\Exception\PropertyDoesNotExist;
+use Rector\BetterReflection\Reflection\Exception\Uncloneable;
+use Rector\BetterReflection\Reflection\StringCast\ReflectionClassStringCast;
+use Rector\BetterReflection\Reflector\Reflector;
+use Rector\BetterReflection\SourceLocator\Located\LocatedSource;
+use Rector\BetterReflection\Util\CalculateReflectionColum;
+use Rector\BetterReflection\Util\GetFirstDocComment;
 use Traversable;
 
 class ReflectionClass implements Reflection, CoreReflector
@@ -104,7 +104,7 @@ class ReflectionClass implements Reflection, CoreReflector
     /**
      * Create a ReflectionClass by name, using default reflectors etc.
      *
-     * @throws \Roave\BetterReflection\Reflector\Exception\IdentifierNotFound
+     * @throws \Rector\BetterReflection\Reflector\Exception\IdentifierNotFound
      */
     public static function createFromName(string $className) : self
     {
@@ -120,7 +120,8 @@ class ReflectionClass implements Reflection, CoreReflector
      *
      * @param object $instance
      *
-     * @throws \Roave\BetterReflection\Reflector\Exception\IdentifierNotFound
+     * @return ReflectionClass
+     * @throws \Rector\BetterReflection\Reflector\Exception\IdentifierNotFound
      * @throws \ReflectionException
      * @throws \InvalidArgumentException
      */
@@ -748,7 +749,7 @@ class ReflectionClass implements Reflection, CoreReflector
      * the parent class. If no source locator is given, a default will be used.
      *
      *
-     * @throws \Roave\BetterReflection\Reflection\Exception\NotAClassReflection
+     * @throws \Rector\BetterReflection\Reflection\Exception\NotAClassReflection
      */
     public function getParentClass() : ?ReflectionClass
     {
@@ -1257,7 +1258,8 @@ class ReflectionClass implements Reflection, CoreReflector
     /**
      * Set whether this class is final or not
      *
-     * @throws \Roave\BetterReflection\Reflection\Exception\NotAClassReflection
+     * @param bool $isFinal
+     * @throws \Rector\BetterReflection\Reflection\Exception\NotAClassReflection
      */
     public function setFinal(bool $isFinal) : void
     {

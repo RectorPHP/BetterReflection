@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception;
+namespace Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception;
 
-use Roave\BetterReflection\Reflection\ReflectionClass;
+use Rector\BetterReflection\Reflection\ReflectionClass;
 use RuntimeException;
 
 final class SignatureCheckFailed extends RuntimeException

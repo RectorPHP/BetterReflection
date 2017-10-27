@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util;
+namespace Rector\BetterReflection\Util;
 
 use PhpParser\Node;
-use Roave\BetterReflection\Util\Exception\InvalidNodePosition;
-use Roave\BetterReflection\Util\Exception\NoNodePosition;
+use Rector\BetterReflection\Util\Exception\InvalidNodePosition;
+use Rector\BetterReflection\Util\Exception\NoNodePosition;
 
 /**
  * @internal
@@ -14,8 +14,11 @@ use Roave\BetterReflection\Util\Exception\NoNodePosition;
 final class CalculateReflectionColum
 {
     /**
-     * @throws \Roave\BetterReflection\Util\Exception\InvalidNodePosition
-     * @throws \Roave\BetterReflection\Util\Exception\NoNodePosition
+     * @param string $source
+     * @param \PhpParser\Node $node
+     * @return int
+     * @throws \Rector\BetterReflection\Util\Exception\InvalidNodePosition
+     * @throws \Rector\BetterReflection\Util\Exception\NoNodePosition
      */
     public static function getStartColumn(string $source, Node $node) : int
     {
@@ -27,8 +30,11 @@ final class CalculateReflectionColum
     }
 
     /**
-     * @throws \Roave\BetterReflection\Util\Exception\InvalidNodePosition
-     * @throws \Roave\BetterReflection\Util\Exception\NoNodePosition
+     * @param string $source
+     * @param \PhpParser\Node $node
+     * @return int
+     * @throws \Rector\BetterReflection\Util\Exception\InvalidNodePosition
+     * @throws \Rector\BetterReflection\Util\Exception\NoNodePosition
      */
     public static function getEndColumn(string $source, Node $node) : int
     {
@@ -40,7 +46,10 @@ final class CalculateReflectionColum
     }
 
     /**
-     * @throws \Roave\BetterReflection\Util\Exception\InvalidNodePosition
+     * @param string $source
+     * @param int $position
+     * @return int
+     * @throws \Rector\BetterReflection\Util\Exception\InvalidNodePosition
      */
     private static function calculateColumn(string $source, int $position) : int
     {

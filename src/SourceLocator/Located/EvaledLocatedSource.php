@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\SourceLocator\Located;
+namespace Rector\BetterReflection\SourceLocator\Located;
 
 /**
  * {@inheritDoc}

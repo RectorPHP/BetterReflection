@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util\Autoload\ClassLoaderMethod;
+namespace Rector\BetterReflection\Util\Autoload\ClassLoaderMethod;
 
-use Roave\BetterReflection\Reflection\ReflectionClass;
-use Roave\BetterReflection\Util\Autoload\ClassPrinter\ClassPrinterInterface;
-use Roave\BetterReflection\Util\Autoload\ClassPrinter\PhpParserPrinter;
+use Rector\BetterReflection\Reflection\ReflectionClass;
+use Rector\BetterReflection\Util\Autoload\ClassPrinter\ClassPrinterInterface;
+use Rector\BetterReflection\Util\Autoload\ClassPrinter\PhpParserPrinter;
 use Roave\Signature\CheckerInterface;
 use Roave\Signature\Encoder\Sha1SumEncoder;
 use Roave\Signature\FileContentChecker;
@@ -49,7 +49,7 @@ final class FileCacheLoader implements LoaderMethodInterface
 
     /**
      * {@inheritdoc}
-     * @throws \Roave\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception\SignatureCheckFailed
+     * @throws \Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception\SignatureCheckFailed
      */
     public function __invoke(ReflectionClass $classInfo) : void
     {

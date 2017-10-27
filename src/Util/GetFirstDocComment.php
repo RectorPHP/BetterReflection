@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util;
+namespace Rector\BetterReflection\Util;
 
 use PhpParser\Comment\Doc;
 use PhpParser\NodeAbstract;

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\SourceLocator\Ast;
+namespace Rector\BetterReflection\SourceLocator\Ast;
 
 use PhpParser\Parser;
-use Roave\BetterReflection\Identifier\Identifier;
-use Roave\BetterReflection\Identifier\IdentifierType;
-use Roave\BetterReflection\Reflection\Reflection;
-use Roave\BetterReflection\Reflector\Exception\IdentifierNotFound;
-use Roave\BetterReflection\Reflector\Reflector;
-use Roave\BetterReflection\SourceLocator\Ast\Strategy\NodeToReflection;
-use Roave\BetterReflection\SourceLocator\Located\LocatedSource;
+use Rector\BetterReflection\Identifier\Identifier;
+use Rector\BetterReflection\Identifier\IdentifierType;
+use Rector\BetterReflection\Reflection\Reflection;
+use Rector\BetterReflection\Reflector\Exception\IdentifierNotFound;
+use Rector\BetterReflection\Reflector\Reflector;
+use Rector\BetterReflection\SourceLocator\Ast\Strategy\NodeToReflection;
+use Rector\BetterReflection\SourceLocator\Located\LocatedSource;
 use Throwable;
 
 /**
@@ -37,7 +37,11 @@ class Locator
     }
 
     /**
-     * @throws \Roave\BetterReflection\Reflector\Exception\IdentifierNotFound
+     * @param Reflector $reflector
+     * @param LocatedSource $locatedSource
+     * @param Identifier $identifier
+     * @return Reflection
+     * @throws \Rector\BetterReflection\Reflector\Exception\IdentifierNotFound
      * @throws Exception\ParseToAstFailure
      */
     public function findReflection(
@@ -58,7 +62,10 @@ class Locator
     /**
      * Get an array of reflections found in some code.
      *
-     * @return \Roave\BetterReflection\Reflection\Reflection[]
+     * @param Reflector $reflector
+     * @param LocatedSource $locatedSource
+     * @param IdentifierType $identifierType
+     * @return \Rector\BetterReflection\Reflection\Reflection[]
      * @throws Exception\ParseToAstFailure
      */
     public function findReflectionsOfType(
@@ -82,7 +89,9 @@ class Locator
      * Given an array of Reflections, try to find the identifier.
      *
      * @param Reflection[] $reflections
-     * @throws \Roave\BetterReflection\Reflector\Exception\IdentifierNotFound
+     * @param Identifier $identifier
+     * @return Reflection
+     * @throws \Rector\BetterReflection\Reflector\Exception\IdentifierNotFound
      */
     private function findInArray(array $reflections, Identifier $identifier) : Reflection
     {

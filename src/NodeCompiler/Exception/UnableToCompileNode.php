@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\NodeCompiler\Exception;
+namespace Rector\BetterReflection\NodeCompiler\Exception;
 
 use LogicException;
 

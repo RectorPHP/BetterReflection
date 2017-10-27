@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflectionTest\SourceLocator;
+namespace Rector\BetterReflectionTest\SourceLocator;
 
 use PHPUnit\Framework\TestCase;
-use Roave\BetterReflection\SourceLocator\Exception\InvalidFileLocation;
-use Roave\BetterReflection\SourceLocator\FileChecker;
+use Rector\BetterReflection\SourceLocator\Exception\InvalidFileLocation;
+use Rector\BetterReflection\SourceLocator\FileChecker;
 
 /**
- * @covers \Roave\BetterReflection\SourceLocator\FileChecker
+ * @covers \Rector\BetterReflection\SourceLocator\FileChecker
  */
 class FileCheckerTest extends TestCase
 {

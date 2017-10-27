@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util\Exception;
+namespace Rector\BetterReflection\Util\Exception;
 
 use InvalidArgumentException;
 use PhpParser\Lexer;

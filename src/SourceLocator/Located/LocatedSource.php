@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\SourceLocator\Located;
+namespace Rector\BetterReflection\SourceLocator\Located;
 
-use Roave\BetterReflection\SourceLocator\FileChecker;
-use Roave\BetterReflection\Util\FileHelper;
+use Rector\BetterReflection\SourceLocator\FileChecker;
+use Rector\BetterReflection\Util\FileHelper;
 
 /**
  * Value object containing source code that has been located.
@@ -26,7 +26,7 @@ class LocatedSource
 
     /**
      * @throws \InvalidArgumentException
-     * @throws \Roave\BetterReflection\SourceLocator\Exception\InvalidFileLocation
+     * @throws \Rector\BetterReflection\SourceLocator\Exception\InvalidFileLocation
      */
     public function __construct(string $source, ?string $filename)
     {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflectionTest\Util\Exception;
+namespace Rector\BetterReflectionTest\Util\Exception;
 
 use PhpParser\Lexer;
 use PhpParser\Node\Scalar\LNumber;
 use PHPUnit\Framework\TestCase;
-use Roave\BetterReflection\Util\Exception\NoNodePosition;
+use Rector\BetterReflection\Util\Exception\NoNodePosition;
 
 /**
- * @covers \Roave\BetterReflection\Util\Exception\NoNodePosition
+ * @covers \Rector\BetterReflection\Util\Exception\NoNodePosition
  */
 class NoNodePositionTest extends TestCase
 {

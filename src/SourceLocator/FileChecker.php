@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\SourceLocator;
+namespace Rector\BetterReflection\SourceLocator;
 
-use Roave\BetterReflection\SourceLocator\Exception\InvalidFileLocation;
+use Rector\BetterReflection\SourceLocator\Exception\InvalidFileLocation;
 
 class FileChecker
 {
     /**
      *
-     * @throws \Roave\BetterReflection\SourceLocator\Exception\InvalidFileLocation
+     * @throws \Rector\BetterReflection\SourceLocator\Exception\InvalidFileLocation
      */
     public static function assertReadableFile(string $filename) : void
     {

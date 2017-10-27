@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Roave\BetterReflection\Util\Autoload\Exception;
+namespace Rector\BetterReflection\Util\Autoload\Exception;
 
 use LogicException;
 
