@@ -128,7 +128,7 @@ class CompileNodeToValue
     {
         $className = $node->class->toString();
 
-        if ('class' === $node->name) {
+        if ('class' === $node->name->toString()) {
             return $className;
         }
 
@@ -136,7 +136,7 @@ class CompileNodeToValue
         $classInfo = null;
 
         if ('self' === $className || 'static' === $className) {
-            $classInfo = $this->getConstantDeclaringClass($node->name, $context->getSelf());
+            $classInfo = $this->getConstantDeclaringClass($node->name->toString(), $context->getSelf());
         }
 
         if (null === $classInfo) {
@@ -144,7 +144,7 @@ class CompileNodeToValue
             $classInfo = $context->getReflector()->reflect($className);
         }
 
-        $reflectionConstant = $classInfo->getReflectionConstant($node->name);
+        $reflectionConstant = $classInfo->getReflectionConstant($node->name->toString());
 
         return $this->__invoke(
             $reflectionConstant->getAst()->consts[$reflectionConstant->getPositionInAst()]->value,
