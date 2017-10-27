@@ -1,7 +1,7 @@
 Better Reflection
 =================
 
-[![Build Status](https://travis-ci.org/Roave/BetterReflection.svg?branch=master)](https://travis-ci.org/Roave/BetterReflection) [![Build Status](https://ci.appveyor.com/api/projects/status/github/Roave/BetterReflection?svg=true&branch=master)](https://ci.appveyor.com/project/Ocramius/betterreflection-4jx2w) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Roave/BetterReflection/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Roave/BetterReflection/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/Roave/BetterReflection/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Roave/BetterReflection/?branch=master) [![Latest Stable Version](https://poser.pugx.org/roave/better-reflection/v/stable)](https://packagist.org/packages/roave/better-reflection) [![License](https://poser.pugx.org/roave/better-reflection/license)](https://packagist.org/packages/roave/better-reflection)
+[![Build Status](https://travis-ci.org/Rector/BetterReflection.svg?branch=master)](https://travis-ci.org/Rector/BetterReflection) [![Build Status](https://ci.appveyor.com/api/projects/status/github/Rector/BetterReflection?svg=true&branch=master)](https://ci.appveyor.com/project/Ocramius/betterreflection-4jx2w) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Rector/BetterReflection/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Rector/BetterReflection/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/Rector/BetterReflection/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Rector/BetterReflection/?branch=master) [![Latest Stable Version](https://poser.pugx.org/rector/better-reflection/v/stable)](https://packagist.org/packages/rector/better-reflection) [![License](https://poser.pugx.org/rector/better-reflection/license)](https://packagist.org/packages/rector/better-reflection)
 
 Better Reflection is a reflection API that aims to improve and provide more
 features than PHP's built-in [reflection API](http://php.net/manual/en/book.reflection.php).
@@ -26,7 +26,7 @@ Be sure to read more in the [feature documentation](docs/features.md).
 Simply require using composer:
 
 ```shell
-$ composer require roave/better-reflection
+$ composer require rector/better-reflection
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ $classInfo = (new BetterReflection())
 * [Basic usage instructions](docs/usage.md)
 * [Using types](docs/types.md)
 * [The features](docs/features.md)
-* [Test suite](https://github.com/Roave/BetterReflection/blob/master/test/README.md)
+* [Test suite](https://github.com/Rector/BetterReflection/blob/master/test/README.md)
 * [AST extraction](docs/ast-extraction.md)
 * [Reflection modification](docs/reflection-modification.md)
 

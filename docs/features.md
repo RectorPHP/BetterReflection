@@ -12,15 +12,15 @@ not then *unload* that class - this is not currently possible in PHP.
 
 ## Reflecting on things within a string
 
-See [Loading a class from a string](https://github.com/Roave/BetterReflection/tree/master/docs/usage.md#Loading-a-class-from-a-string)
+See [Loading a class from a string](https://github.com/Rector/BetterReflection/tree/master/docs/usage.md#Loading-a-class-from-a-string)
 
 ## Analysing types from DocBlocks
 
-See [types documentation](https://github.com/Roave/BetterReflection/tree/master/docs/types.md)
+See [types documentation](https://github.com/Rector/BetterReflection/tree/master/docs/types.md)
 
 ## AST extraction from Reflections
 
-See [AST extraction documentation](https://github.com/Roave/BetterReflection/tree/master/docs/ast-extraction.md)
+See [AST extraction documentation](https://github.com/Rector/BetterReflection/tree/master/docs/ast-extraction.md)
 
 ## PHP 7 Parameter Type Declarations and Return Type Declarations
 

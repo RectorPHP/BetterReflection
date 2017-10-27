@@ -10,7 +10,7 @@
 | getDefaultProperties | :heavy_check_mark: Yes |
 | getDocComment | :heavy_check_mark: Yes |
 | getEndLine | :heavy_check_mark: Yes |
-| getExtension | :x: No - see ([#15](https://github.com/Roave/BetterReflection/issues/15)) |
+| getExtension | :x: No - see ([#15](https://github.com/Rector/BetterReflection/issues/15)) |
 | getExtensionName | :heavy_check_mark: Yes |
 | getFileName | :heavy_check_mark: Yes |
 | getInterfaceNames | :heavy_check_mark: Yes  |
@@ -47,20 +47,20 @@
 | isSubclassOf | :heavy_check_mark: Yes  |
 | isTrait | :heavy_check_mark: Yes |
 | isUserDefined | :heavy_check_mark: Yes |
-| newInstance | :x: No - see ([#14](https://github.com/Roave/BetterReflection/issues/14)) |
-| newInstanceArgs | :x: No - see ([#14](https://github.com/Roave/BetterReflection/issues/14)) |
-| newInstanceWithoutConstructor | :x: No - see([#14](https://github.com/Roave/BetterReflection/issues/14)) |
+| newInstance | :x: No - see ([#14](https://github.com/Rector/BetterReflection/issues/14)) |
+| newInstanceArgs | :x: No - see ([#14](https://github.com/Rector/BetterReflection/issues/14)) |
+| newInstanceWithoutConstructor | :x: No - see([#14](https://github.com/Rector/BetterReflection/issues/14)) |
 | setStaticPropertyValue | :heavy_check_mark: Yes |
 
 ## ReflectionFunctionAbstract
 
 | Method | Supported |
 |--------|-----------|
-| getClosureScopeClass | :x: No - see ([#14](https://github.com/Roave/BetterReflection/issues/14)) |
-| getClosureThis | :x: No - see ([#14](https://github.com/Roave/BetterReflection/issues/14)) |
+| getClosureScopeClass | :x: No - see ([#14](https://github.com/Rector/BetterReflection/issues/14)) |
+| getClosureThis | :x: No - see ([#14](https://github.com/Rector/BetterReflection/issues/14)) |
 | getDocComment | :heavy_check_mark: Yes |
 | getEndLine | :heavy_check_mark: Yes |
-| getExtension | :x: No - see ([#15](https://github.com/Roave/BetterReflection/issues/15)) |
+| getExtension | :x: No - see ([#15](https://github.com/Rector/BetterReflection/issues/15)) |
 | getExtensionName | :heavy_check_mark: Yes |
 | getFileName | :heavy_check_mark: Yes |
 | getName | :heavy_check_mark: Yes |
@@ -70,7 +70,7 @@
 | getParameters | :heavy_check_mark: Yes |
 | getShortName | :heavy_check_mark: Yes |
 | getStartLine | :heavy_check_mark: Yes |
-| getStaticVariables | :x: No - see ([#14](https://github.com/Roave/BetterReflection/issues/14)) |
+| getStaticVariables | :x: No - see ([#14](https://github.com/Rector/BetterReflection/issues/14)) |
 | inNamespace | :heavy_check_mark: Yes |
 | isClosure | :heavy_check_mark: Yes |
 | isDeprecated | :heavy_check_mark: Yes |

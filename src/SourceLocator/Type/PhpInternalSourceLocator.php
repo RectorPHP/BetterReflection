@@ -42,7 +42,7 @@ final class PhpInternalSourceLocator extends AbstractSourceLocator
         if ($stub = $this->getStub($classReflection->getName())) {
             /**
              * @todo this code path looks never used, and disagrees with the contract anyway...?
-             * @see https://github.com/Roave/BetterReflection/issues/257
+             * @see https://github.com/Rector/BetterReflection/issues/257
              */
             return new InternalLocatedSource("<?php\n\n" . $stub, $extensionName);
         }

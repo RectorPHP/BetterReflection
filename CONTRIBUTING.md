@@ -15,7 +15,7 @@ title: Contributing
 To install the project and run the tests, you need to clone it first:
 
 ```sh
-$ git clone git://github.com/Roave/BetterReflection.git
+$ git clone git://github.com/Rector/BetterReflection.git
 ```
 
 You will then need to run a [Composer](https://getcomposer.org/) installation:
@@ -36,4 +36,4 @@ $ vendor/bin/phpunit
 
 Please ensure all new features or conditions are covered by unit tests.
 
-Read more about testing in [test/README.md](https://github.com/Roave/BetterReflection/blob/master/test/README.md).
+Read more about testing in [test/README.md](https://github.com/Rector/BetterReflection/blob/master/test/README.md).

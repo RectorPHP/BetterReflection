@@ -285,7 +285,7 @@ abstract class ReflectionFunctionAbstract implements CoreReflector
      * code we can access. This means, at present, we can only EVER return false
      * from this function.
      *
-     * @see https://github.com/Roave/BetterReflection/issues/38
+     * @see https://github.com/Rector/BetterReflection/issues/38
      * @return bool
      */
     public function isDeprecated() : bool
@@ -300,7 +300,7 @@ abstract class ReflectionFunctionAbstract implements CoreReflector
      * code we can access. This means, at present, we can only EVER return false
      * from this function.
      *
-     * @see https://github.com/Roave/BetterReflection/issues/38
+     * @see https://github.com/Rector/BetterReflection/issues/38
      * @return bool
      */
     public function isInternal() : bool
