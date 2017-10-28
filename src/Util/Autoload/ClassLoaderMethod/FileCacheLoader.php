@@ -7,11 +7,11 @@ namespace Rector\BetterReflection\Util\Autoload\ClassLoaderMethod;
 use Rector\BetterReflection\Reflection\ReflectionClass;
 use Rector\BetterReflection\Util\Autoload\ClassPrinter\ClassPrinterInterface;
 use Rector\BetterReflection\Util\Autoload\ClassPrinter\PhpParserPrinter;
-use Rector\Signature\CheckerInterface;
-use Rector\Signature\Encoder\Sha1SumEncoder;
-use Rector\Signature\FileContentChecker;
-use Rector\Signature\FileContentSigner;
-use Rector\Signature\SignerInterface;
+use Roave\Signature\CheckerInterface;
+use Roave\Signature\Encoder\Sha1SumEncoder;
+use Roave\Signature\FileContentChecker;
+use Roave\Signature\FileContentSigner;
+use Roave\Signature\SignerInterface;
 
 final class FileCacheLoader implements LoaderMethodInterface
 {
