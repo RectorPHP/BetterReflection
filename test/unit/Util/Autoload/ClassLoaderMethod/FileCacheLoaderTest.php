@@ -8,8 +8,8 @@ use Rector\BetterReflection\Reflection\ReflectionClass;
 use Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\Exception\SignatureCheckFailed;
 use Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\FileCacheLoader;
 use Rector\BetterReflection\Util\Autoload\ClassPrinter\ClassPrinterInterface;
-use Rector\Signature\CheckerInterface;
-use Rector\Signature\SignerInterface;
+use Roave\Signature\CheckerInterface;
+use Roave\Signature\SignerInterface;
 
 /**
  * @covers \Rector\BetterReflection\Util\Autoload\ClassLoaderMethod\FileCacheLoader
