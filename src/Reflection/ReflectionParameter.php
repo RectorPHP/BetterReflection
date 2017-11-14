@@ -186,12 +186,13 @@ class ReflectionParameter implements CoreReflector
         if ($defaultValueNode instanceof Node\Expr\ClassConstFetch) {
             $className = $defaultValueNode->class->toString();
 
-            if ($className === 'self' || $className === 'static') {
-                $className = $this->findParentClassDeclaringConstant($defaultValueNode->name);
+            if ('self' === $className || 'static' === $className) {
+                $className = $this->findParentClassDeclaringConstant($defaultValueNode->name->toString());
             }
 
             $this->isDefaultValueConstant   = true;
-            $this->defaultValueConstantName = $className . '::' . $defaultValueNode->name;
+            $this->defaultValueConstantName = $className . '::' . $defaultValueNode->name->toString();
+            $this->defaultValueConstantType = self::CONST_TYPE_CLASS;
         }
 
         if ($defaultValueNode instanceof Node\Expr\ConstFetch
