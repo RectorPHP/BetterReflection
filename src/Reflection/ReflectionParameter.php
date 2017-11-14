@@ -213,11 +213,11 @@ class ReflectionParameter implements CoreReflector
             $className = $defaultValueNode->class->toString();
 
             if ('self' === $className || 'static' === $className) {
-                $className = $this->findParentClassDeclaringConstant($defaultValueNode->name);
+                $className = $this->findParentClassDeclaringConstant($defaultValueNode->name->toString());
             }
 
             $this->isDefaultValueConstant   = true;
-            $this->defaultValueConstantName = $className . '::' . $defaultValueNode->name;
+            $this->defaultValueConstantName = $className . '::' . $defaultValueNode->name->toString();
             $this->defaultValueConstantType = self::CONST_TYPE_CLASS;
         }
 
