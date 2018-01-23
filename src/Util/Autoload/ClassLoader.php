@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\Util\Autoload;
@@ -50,13 +51,13 @@ final class ClassLoader
      */
     public function __invoke(string $classToLoad) : bool
     {
-        if ( ! \array_key_exists($classToLoad, $this->reflections)) {
+        if (! \array_key_exists($classToLoad, $this->reflections)) {
             return false;
         }
 
         $this->loaderMethod->__invoke($this->reflections[$classToLoad]);
 
-        if ( ! (\class_exists($classToLoad, false)
+        if (! (\class_exists($classToLoad, false)
             || \interface_exists($classToLoad, false)
             || \trait_exists($classToLoad, false))) {
             throw Exception\FailedToLoadClass::fromClassName($classToLoad);

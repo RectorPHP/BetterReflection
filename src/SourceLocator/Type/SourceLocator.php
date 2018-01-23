@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\SourceLocator\Type;
@@ -19,10 +20,6 @@ interface SourceLocator
      * NOTE: A SourceLocator should *NOT* throw an exception if it is unable to
      * locate the identifier, it should simply return null. If an exception is
      * thrown, it will break the Generic Reflector.
-     *
-     * @param Reflector $reflector
-     * @param Identifier $identifier
-     * @return Reflection|null
      */
     public function locateIdentifier(Reflector $reflector, Identifier $identifier) : ?Reflection;
 

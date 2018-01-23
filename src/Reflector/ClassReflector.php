@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\Reflector;
@@ -15,9 +16,6 @@ class ClassReflector implements Reflector
      */
     private $sourceLocator;
 
-    /**
-     * @param SourceLocator $sourceLocator
-     */
     public function __construct(SourceLocator $sourceLocator)
     {
         $this->sourceLocator = $sourceLocator;
@@ -36,7 +34,7 @@ class ClassReflector implements Reflector
 
         $classInfo = $this->sourceLocator->locateIdentifier($this, $identifier);
 
-        if (null === $classInfo) {
+        if ($classInfo === null) {
             throw Exception\IdentifierNotFound::fromIdentifier($identifier);
         }
 

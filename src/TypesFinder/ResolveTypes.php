@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\TypesFinder;
@@ -20,7 +21,6 @@ class ResolveTypes
 
     /**
      * @param string[] $stringTypes
-     * @param Context $context
      * @return \phpDocumentor\Reflection\Type[]
      */
     public function __invoke(array $stringTypes, Context $context) : array

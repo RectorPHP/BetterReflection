@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflectionTest\SourceLocator\Exception;
@@ -15,10 +16,7 @@ class InvalidDirectoryTest extends TestCase
     /**
      * @dataProvider nonStringValuesProvider
      *
-     * @param string $expectedMessage
      * @param mixed $value
-     *
-     * @return void
      */
     public function testFromNonStringValue(string $expectedMessage, $value) : void
     {
@@ -49,7 +47,7 @@ class InvalidDirectoryTest extends TestCase
         $exception = InvalidDirectory::fromNonDirectory($directory);
 
         self::assertInstanceOf(InvalidDirectory::class, $exception);
-        self::assertSame(\sprintf('"%s" does not exists', $directory), $exception->getMessage());
+        self::assertSame(\sprintf('"%s" does not exist', $directory), $exception->getMessage());
     }
 
     public function testFromNonDirectoryWithFile() : void

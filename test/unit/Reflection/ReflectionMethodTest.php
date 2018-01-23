@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflectionTest\Reflection;
@@ -59,9 +60,8 @@ class ReflectionMethodTest extends TestCase
     {
         parent::setUp();
 
-        global $loader;
         $this->astLocator = BetterReflectionSingleton::instance()->astLocator();
-        $this->reflector  = new ClassReflector(new ComposerSourceLocator($loader, $this->astLocator));
+        $this->reflector  = new ClassReflector(new ComposerSourceLocator($GLOBALS['loader'], $this->astLocator));
     }
 
     public function testCreateFromName() : void
@@ -105,13 +105,6 @@ class ReflectionMethodTest extends TestCase
     }
 
     /**
-     * @param string $methodName
-     * @param bool $shouldBePublic
-     * @param bool $shouldBePrivate
-     * @param bool $shouldBeProtected
-     * @param bool $shouldBeFinal
-     * @param bool $shouldBeAbstract
-     * @param bool $shouldBeStatic
      * @dataProvider visibilityProvider
      */
     public function testVisibilityOfMethods(
@@ -293,8 +286,6 @@ class ReflectionMethodTest extends TestCase
     }
 
     /**
-     * @param string $methodName
-     * @param int $expectedModifier
      * @param string[] $expectedModifierNames
      * @dataProvider modifierProvider
      */
@@ -325,9 +316,6 @@ class ReflectionMethodTest extends TestCase
     }
 
     /**
-     * @param string $class
-     * @param string $method
-     * @param string|null $expectedPrototype
      * @dataProvider prototypeProvider
      */
     public function testGetPrototype(string $class, string $method, ?string $expectedPrototype) : void
@@ -335,7 +323,7 @@ class ReflectionMethodTest extends TestCase
         $fixture   = __DIR__ . '/../Fixture/PrototypeTree.php';
         $reflector = new ClassReflector(new SingleFileSourceLocator($fixture, $this->astLocator));
 
-        if (null === $expectedPrototype) {
+        if ($expectedPrototype === null) {
             $this->expectException(MethodPrototypeNotFound::class);
         }
 
@@ -614,5 +602,13 @@ PHP;
 
         self::assertSame(103, $methodReflection->invoke($object, 1, 2));
         self::assertSame(107, $methodReflection->invoke($object, 3, 4));
+    }
+
+    public function testInterfaceMethodBodyAst() : void
+    {
+        $classInfo  = $this->reflector->reflect(InterfaceWithMethod::class);
+        $methodInfo = $classInfo->getMethod('someMethod');
+
+        self::assertSame([], $methodInfo->getBodyAst());
     }
 }

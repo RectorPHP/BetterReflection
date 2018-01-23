@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\Reflector;
@@ -39,7 +40,7 @@ class FunctionReflector implements Reflector
 
         $functionInfo = $this->sourceLocator->locateIdentifier($this->classReflector, $identifier);
 
-        if (null === $functionInfo) {
+        if ($functionInfo === null) {
             throw Exception\IdentifierNotFound::fromIdentifier($identifier);
         }
 

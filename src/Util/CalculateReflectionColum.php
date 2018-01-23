@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rector\BetterReflection\Util;
@@ -21,7 +22,7 @@ final class CalculateReflectionColum
      */
     public static function getStartColumn(string $source, Node $node) : int
     {
-        if ( ! $node->hasAttribute('startFilePos')) {
+        if (! $node->hasAttribute('startFilePos')) {
             throw NoNodePosition::fromNode($node);
         }
 
@@ -37,7 +38,7 @@ final class CalculateReflectionColum
      */
     public static function getEndColumn(string $source, Node $node) : int
     {
-        if ( ! $node->hasAttribute('endFilePos')) {
+        if (! $node->hasAttribute('endFilePos')) {
             throw NoNodePosition::fromNode($node);
         }
 
@@ -59,7 +60,7 @@ final class CalculateReflectionColum
         }
 
         $lineStartPosition = \strrpos($source, "\n", $position - $sourceLength);
-        if (false === $lineStartPosition) {
+        if ($lineStartPosition === false) {
             return $position + 1;
         }
 
